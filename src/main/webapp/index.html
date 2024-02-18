@@ -6,31 +6,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-		crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="style.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 	<title>COOKIEDU</title>
 </head>
 
 <body>
-	<div class="fixed-bottom d-flex justify-content-end" style="bottom: 10px; right: 10px;">
-		<button class="btn rounded-pill btn-lg btn-warning" data-bs-toggle="offcanvas"
-			data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
-			<i class="fa fa-comments" aria-hidden="true"></i>
-		</button>
-	</div>
-	<div class="offcanvas offcanvas-end text-bg-secondary" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
-		id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
-		<div class="offcanvas-header">
-			<h5 class="offcanvas-title" id="offcanvasScrollingLabel">Chatbox</h5>
-			<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-		</div>
-		<div class="offcanvas-body">
-			<p>Try scrolling the rest of the page to see this option in action.</p>
-		</div>
-	</div>
 	<!-- Navbar -->
 	<nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
 		<div class="container">
@@ -537,6 +518,43 @@
 		</div>
 	</section>
 
+	<div class="position-fixed bottom-0 end-0 p-3" style="bottom: 10px; right: 10px;">
+		<button class="btn rounded-pill btn-lg btn-info" id="liveToastBtn">
+			<i class="fa fa-comments" aria-hidden="true"></i>
+		</button>
+	</div>
+	<div class="toast-container position-fixed bottom-0 end-0 p-3">
+		<div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true"
+			data-bs-autohide="false">
+			<div class="toast-header text-bg-info">
+				<img src="images/cookiedu_logo.png" style="width: 30px;" class="rounded me-2" alt="...">
+				<strong class="me-auto">COOKIEDU <small class="text-success"><i
+							class="fa fa-circle fa-2xs"></i></small></strong>
+				<small>Just now</small>
+				<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+			</div>
+			<div class="toast-body bg-light" style="height: 500px;">
+				<div class="overflow-y-scroll overflow-x-hidden" style="height: 430px; width: 335px;">
+					<div class="row pb-2 ps-3">
+						<div class="badge bg-secondary text-wrap text-center" style="width: 250px;">
+							<h6 class="">Hello! What can we help you?</h6>
+						</div>
+					</div>
+					<div class="row pb-2 justify-content-end pe-3">
+						<div class="badge bg-primary text-wrap text-center" style="width: 250px;">
+							<h6>I don't want anything.</h6>
+						</div>
+					</div>
+				</div>
+				<div class="row align-items-center g-2">
+					<div class="col"><textarea class="" style="width: 270px; resize: none;"></textarea></div>
+					<div class="col"><button class="btn btn-primary"><i class="fa fa-paper-plane fa-lg"
+								aria-hidden="true"></i></button></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<!-- Footer -->
 	<footer class="p-5 bg-dark text-white text-center position-relative">
 		<div class="container">
@@ -547,6 +565,12 @@
 			</a>
 		</div>
 	</footer>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+		crossorigin="anonymous"></script>
+	<script src="js/toast.js"></script>
+
 </body>
 
 </html>
