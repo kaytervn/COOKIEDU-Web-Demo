@@ -13,29 +13,11 @@
 		</button>
 
 		<div class="collapse navbar-collapse" id="navmenu">
+			<ul class="navbar-nav">
+				<li class="nav-item"><a href="#" class="nav-link"> Home</a></li>
+				<li class="nav-item"><a href="#" class="nav-link"> Course</a></li>
+			</ul>
 			<ul class="navbar-nav ms-auto">
-				<li class="nav-item"><a href="#" class="nav-link"><i
-						class="fa fa-home" aria-hidden="true"></i> Home</a></li>
-				<li class="nav-item dropdown"><a
-					class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
-					aria-expanded="false"><i class="fa fa-users" aria-hidden="true"></i>
-						Community</a>
-					<ul class="dropdown-menu dropdown-menu-dark">
-						<li><a class="dropdown-item" href="#">News</a></li>
-						<li><a class="dropdown-item" href="#">Blog</a></li>
-					</ul></li>
-				<li class="nav-item dropdown"><a
-					class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
-					aria-expanded="false"><i class="fa fa-book" aria-hidden="true"></i>
-						Courses</a>
-					<ul class="dropdown-menu dropdown-menu-dark">
-						<li><a class="dropdown-item" href="#">Demo</a></li>
-						<li><a class="dropdown-item" href="#">Official</a></li>
-					</ul></li>
-				<li class="nav-item"><a href="#questions" class="nav-link"><i
-						class="fa fa-graduation-cap" aria-hidden="true"></i> Instructors</a></li>
-				<li class="nav-item"><a href="#questions" class="nav-link"><i
-						class="fa fa-certificate" aria-hidden="true"></i> Leaderboard</a></li>
 				<li class="nav-item">
 					<button class="btn btn-outline-light">
 						<i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart <span
@@ -70,7 +52,7 @@
 				<button class="btn btn-primary btn-lg" data-bs-toggle="modal"
 					data-bs-target="#enroll">Get Started</button>
 			</div>
-			<img class="img-fluid w-50 d-none d-sm-block"
+			<img class="img-fluid w-50 d-none d-sm-block d-md-block"
 				src="${pageContext.servletContext.contextPath}/images/learning.png"
 				alt="" />
 		</div>
@@ -81,7 +63,7 @@
 	<div class="container">
 		<div class="d-md-flex justify-content-between align-items-center">
 			<h2 class="mb-3 mb-md-0">
-				We <span class="text-warning">COOK</span> IT
+				<span class="text-warning">COOKI</span>EDU - Join Us Now!
 			</h2>
 
 			<div class="input-group news-input">
@@ -108,7 +90,6 @@
 						<p class="card-text">Connect and interact with other leaners,
 							exchange information about study materials, and provide support
 							in answering questions.</p>
-						<a href="#" class="btn btn-primary">Explore</a>
 					</div>
 				</div>
 			</div>
@@ -122,7 +103,6 @@
 						<p class="card-text">Online courses provide convenient and
 							flexible learning opportunities. Learners can access a wide range
 							of educational materials from anywhere.</p>
-						<a href="#" class="btn btn-dark">Explore</a>
 					</div>
 				</div>
 			</div>
@@ -136,7 +116,6 @@
 						<p class="card-text">With a team of high-quality and
 							passionate instructors, learners will achieve the desired
 							outcomes according to the specific progression of each course.</p>
-						<a href="#" class="btn btn-primary">Explore</a>
 					</div>
 				</div>
 			</div>
@@ -153,7 +132,9 @@
 					class="img-fluid" alt="" />
 			</div>
 			<div class="col-md p-5">
-				<h2>Learn The Fundamentals</h2>
+				<h2>
+					We <span class="text-warning">COOK</span> IT
+				</h2>
 				<p class="lead">This online learning platform focused on
 					technical skills in the field of technology.</p>
 				<p>Explore and deepen your understanding of various technical
@@ -162,10 +143,6 @@
 					technology. Gain valuable skills, stay up-to-date with the latest
 					trends, and unlock new opportunities in the exciting realm of
 					technology.</p>
-				<a href="#" class="btn btn-light mt-3"> <i
-					class="fa fa-chevron-circle-right" aria-hidden="true"></i> Read
-					More
-				</a>
 			</div>
 		</div>
 	</div>
@@ -231,15 +208,10 @@
 				</div>
 			</div>
 		</div>
-		<div class="d-flex justify-content-end mt-3">
-			<a href="#" class="btn btn-dark"> <i
-				class="fa fa-chevron-circle-right" aria-hidden="true"></i> Read More
-			</a>
-		</div>
 	</div>
 </section>
 
-<section class="bg-primary text-light p-5">
+<section class="p-5">
 	<div class="container">
 		<h2 class="text-center mb-4">Student Feedback</h2>
 		<div id="carouselExampleCaptions" class="carousel slide"
@@ -281,7 +253,7 @@
 						</div>
 						<div class="col-1"></div>
 					</div>
-					<div class="carousel-caption d-none d-md-block">
+					<div class="carousel-caption text-dark d-none d-md-block">
 						<b>Registered Courses:</b> Software Engineering, Database
 						Management, Cybersecurity
 					</div>
@@ -312,7 +284,7 @@
 						</div>
 						<div class="col-1"></div>
 					</div>
-					<div class="carousel-caption d-none d-md-block">
+					<div class="carousel-caption text-dark d-none d-md-block">
 						<b>Registered Courses:</b> Introduction to Computer Science, Data
 						Structures and Algorithms, Machine Learning
 					</div>
@@ -344,7 +316,7 @@
 						</div>
 						<div class="col-1"></div>
 					</div>
-					<div class="carousel-caption d-none d-md-block">
+					<div class="carousel-caption text-dark d-none d-md-block">
 						<b>Registered Courses:</b> Networking Fundamentals, Cloud
 						Computing, Internet of Things
 					</div>
@@ -361,21 +333,6 @@
 				<span class="visually-hidden">Next</span>
 			</button>
 		</div>
-	</div>
-</section>
-
-<!-- Contact & Map -->
-<section class="p-5">
-	<div class="container">
-		<h2 class="text-center mb-4">Contact Info</h2>
-		<ul class="list-group list-group-flush lead">
-			<li class="list-group-item"><span class="fw-bold">Main
-					Location:</span> 48.9770333,-102.155491</li>
-			<li class="list-group-item"><span class="fw-bold">Phone
-					Number:</span> 0123456789</li>
-			<li class="list-group-item"><span class="fw-bold">Contact
-					Via Email:</span> cookiedu.vip@gmail.com</li>
-		</ul>
 	</div>
 </section>
 

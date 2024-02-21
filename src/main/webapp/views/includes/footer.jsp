@@ -1,3 +1,15 @@
+<footer class="p-5 bg-dark text-white text-center position-relative">
+	<div class="container">
+		<p class="lead">
+			Copyright &copy;
+			<script>
+				document.write(new Date().getFullYear());
+			</script>
+			COOKIEDU - All Rights Reserved.
+		</p>
+	</div>
+</footer>
+
 <div class="position-fixed bottom-0 end-0 p-3"
 	style="bottom: 10px; right: 10px;">
 	<button class="btn rounded-pill btn-lg btn-info" id="liveToastBtn">
@@ -7,7 +19,7 @@
 <div class="toast-container position-fixed bottom-0 end-0 p-3">
 	<div id="liveToast" class="toast" role="alert" aria-live="assertive"
 		aria-atomic="true" data-bs-autohide="false">
-		<div class="toast-header text-bg-info">
+		<div class="toast-header text-bg-info" style="height: 60px;">
 			<img src="images/cookiedu_logo.png" style="width: 30px;"
 				class="rounded me-2" alt="..."> <strong class="me-auto">COOKIEDU
 				<small class="text-success"><i class="fa fa-circle fa-2xs"></i></small>
@@ -57,23 +69,6 @@
 		</div>
 	</div>
 </div>
-
-<!-- Footer -->
-<footer class="p-5 bg-dark text-white text-center position-relative">
-	<div class="container">
-		<p class="lead">
-			Copyright &copy;
-			<script>
-				document.write(new Date().getFullYear());
-			</script>
-			COOKIEDU - All Rights Reserved.
-		</p>
-
-		<a href="#" class="position-absolute bottom-0 end-0 p-5"> <i
-			class="fa fa-arrow-circle-up fa-3x" aria-hidden="true"></i>
-		</a>
-	</div>
-</footer>
 
 <script
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
