@@ -29,7 +29,7 @@
 		</div>
 		<div class="toast-body bg-light" style="height: 500px;">
 			<div class="overflow-y-scroll overflow-x-hidden"
-				style="height: 430px; width: 335px;">
+				style="height: 400px; width: 335px;">
 				<div class="d-flex pb-2">
 					<div class="badge bg-secondary text-wrap text-start">
 						<h6 class="">Hello! What can we help you?</h6>
@@ -55,16 +55,12 @@
 					<div class="p-2 flex-grow-1"></div>
 				</div>
 			</div>
-			<div class="row align-items-center g-2">
-				<div class="col">
-					<textarea class=""
-						style="width: 260px; resize: none; font-size: 16px;"></textarea>
-				</div>
-				<div class="col">
-					<button class="btn btn-primary">
-						<i class="fa fa-paper-plane fa-xl" aria-hidden="true"></i>
-					</button>
-				</div>
+			<div class="input-group mt-3">
+				<textarea class="form-control" style="resize: none;"
+					aria-label="With textarea"></textarea>
+				<button class="btn btn-primary">
+					<i class="fa fa-paper-plane fa-xl" aria-hidden="true"></i>
+				</button>
 			</div>
 		</div>
 	</div>

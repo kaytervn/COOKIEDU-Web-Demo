@@ -214,7 +214,7 @@
 <section class="p-5">
 	<div class="container">
 		<h2 class="text-center mb-4">Student Feedback</h2>
-		<div id="carouselExampleCaptions" class="carousel slide"
+		<div id="carouselExampleCaptions" class="carousel carousel-dark slide"
 			data-bs-ride="carousel">
 			<div class="carousel-indicators">
 				<button type="button" data-bs-target="#carouselExampleCaptions"
