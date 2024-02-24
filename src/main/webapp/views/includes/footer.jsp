@@ -16,20 +16,23 @@
 		<i class="fa fa-comments" aria-hidden="true"></i>
 	</button>
 </div>
+
 <div class="toast-container position-fixed bottom-0 end-0 p-3">
 	<div id="liveToast" class="toast" role="alert" aria-live="assertive"
 		aria-atomic="true" data-bs-autohide="false">
 		<div class="toast-header text-bg-info" style="height: 60px;">
-			<img src="images/cookiedu_logo.png" style="width: 30px;"
-				class="rounded me-2" alt="..."> <strong class="me-auto">COOKIEDU
-				<small class="text-success"><i class="fa fa-circle fa-2xs"></i></small>
+			<img
+				src="${pageContext.servletContext.contextPath}/images/cookiedu_logo.png"
+				style="width: 30px;" class="rounded me-2" alt="..."> <strong
+				class="me-auto">COOKIEDU <small class="text-success"><i
+					class="fa fa-circle fa-2xs"></i></small>
 			</strong> <small>Just now</small>
 			<button type="button" class="btn-close" data-bs-dismiss="toast"
 				aria-label="Close"></button>
 		</div>
 		<div class="toast-body bg-light" style="height: 500px;">
 			<div class="overflow-y-scroll overflow-x-hidden"
-				style="height: 400px; width: 335px;">
+				style="height: 420px; width: 335px;">
 				<div class="d-flex pb-2">
 					<div class="badge bg-secondary text-wrap text-start">
 						<h6 class="">Hello! What can we help you?</h6>
@@ -56,10 +59,9 @@
 				</div>
 			</div>
 			<div class="input-group mt-3">
-				<textarea class="form-control" style="resize: none;"
-					aria-label="With textarea"></textarea>
+				<input class="form-control" placeholder="Chat..."></input>
 				<button class="btn btn-primary">
-					<i class="fa fa-paper-plane fa-xl" aria-hidden="true"></i>
+					<i class="fa fa-paper-plane fa-lg" aria-hidden="true"></i>
 				</button>
 			</div>
 		</div>
@@ -71,6 +73,7 @@
 	integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
 	crossorigin="anonymous"></script>
 <script src="${pageContext.servletContext.contextPath}/js/toast.js"></script>
+<script src="${pageContext.servletContext.contextPath}/js/course_filter.js"></script>
 
 </body>
 </html>

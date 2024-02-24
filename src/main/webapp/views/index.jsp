@@ -1,40 +1,5 @@
 <%@ include file="/views/includes/header.jsp"%>
 
-<nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
-	<div class="container">
-		<a href="#" class="navbar-brand"> <img width="40"
-			src="${pageContext.servletContext.contextPath}/images/cookiedu_logo.png">
-			<span class="text-warning">COOKI</span>EDU
-		</a>
-
-		<button class="navbar-toggler" data-bs-toggle="collapse"
-			data-bs-target="#navmenu">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-
-		<div class="collapse navbar-collapse" id="navmenu">
-			<ul class="navbar-nav">
-				<li class="nav-item"><a href="#" class="nav-link"> Home</a></li>
-				<li class="nav-item"><a href="#" class="nav-link"> Course</a></li>
-			</ul>
-			<ul class="navbar-nav ms-auto">
-				<li class="nav-item">
-					<button class="btn btn-outline-light">
-						<i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart <span
-							class="badge bg-danger">0</span>
-					</button>
-				</li>
-				<li class="nav-item"><a href="#instructors"
-					class="nav-link text-warning"><i class="fa fa-sign-in"
-						aria-hidden="true"></i> Sign in</a></li>
-				<li class="nav-item">
-					<button class="btn btn-primary">Register</button>
-				</li>
-			</ul>
-		</div>
-	</div>
-</nav>
-
 <section
 	class="bg-dark text-light p-lg-0 pt-lg-5 text-center text-sm-start">
 	<div class="container">
@@ -49,8 +14,9 @@
 				<p class="lead my-4">We focus on teaching technology-related
 					fields as well as honing skills for our students, from basic to
 					advanced, tailored to each appropriate age group.</p>
-				<button class="btn btn-primary btn-lg" data-bs-toggle="modal"
-					data-bs-target="#enroll">Get Started</button>
+				<a href="${pageContext.servletContext.contextPath}/views/course.jsp"
+					class="btn btn-primary btn-lg" data-bs-toggle="modal">Get
+					Started</a>
 			</div>
 			<img class="img-fluid w-50 d-none d-sm-block d-md-block"
 				src="${pageContext.servletContext.contextPath}/images/learning.png"
@@ -65,14 +31,6 @@
 			<h2 class="mb-3 mb-md-0">
 				<span class="text-warning">COOKI</span>EDU - Join Us Now!
 			</h2>
-
-			<div class="input-group news-input">
-				<input type="text" class="form-control"
-					placeholder="What are you looking for?" />
-				<button class="btn btn-dark btn-lg">
-					<i class="fa fa-search" aria-hidden="true"></i> Search
-				</button>
-			</div>
 		</div>
 	</div>
 </section>
@@ -90,6 +48,7 @@
 						<p class="card-text">Connect and interact with other leaners,
 							exchange information about study materials, and provide support
 							in answering questions.</p>
+						<a href="#" class="btn btn-primary">Explore</a>
 					</div>
 				</div>
 			</div>
@@ -103,6 +62,7 @@
 						<p class="card-text">Online courses provide convenient and
 							flexible learning opportunities. Learners can access a wide range
 							of educational materials from anywhere.</p>
+						<a href="#" class="btn btn-dark">Explore</a>
 					</div>
 				</div>
 			</div>
@@ -116,6 +76,7 @@
 						<p class="card-text">With a team of high-quality and
 							passionate instructors, learners will achieve the desired
 							outcomes according to the specific progression of each course.</p>
+						<a href="#" class="btn btn-primary">Explore</a>
 					</div>
 				</div>
 			</div>
