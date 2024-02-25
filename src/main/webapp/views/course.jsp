@@ -10,7 +10,7 @@
 				</h1>
 				<p class="lead my-4">Choosing suitable courses is essential for
 					connecting with the world of technology:</p>
-				<ul class="list-group list-group-flush">
+				<ul class="list-group list-group-flush" style="width: 500px;">
 					<li class="list-group-item bg-dark text-light"><b>1.</b>
 						Explore programming languages for software development.</li>
 					<li class="list-group-item bg-dark text-light"><b>2.</b> Dive
@@ -421,5 +421,8 @@
 		</div>
 	</div>
 </section>
+
+<script
+	src="${pageContext.servletContext.contextPath}/js/course_filter.js"></script>
 
 <%@ include file="/views/includes/footer.jsp"%>

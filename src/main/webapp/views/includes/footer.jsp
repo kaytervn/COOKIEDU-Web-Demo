@@ -32,35 +32,11 @@
 		</div>
 		<div class="toast-body bg-light" style="height: 500px;">
 			<div class="overflow-y-scroll overflow-x-hidden"
-				style="height: 420px; width: 335px;">
-				<div class="d-flex pb-2">
-					<div class="badge bg-secondary text-wrap text-start">
-						<h6 class="">Hello! What can we help you?</h6>
-					</div>
-					<div class="p-2 flex-grow-1"></div>
-				</div>
-				<div class="d-flex pb-2">
-					<div class="p-2 flex-grow-1"></div>
-					<div class="badge bg-primary text-wrap text-start">
-						<h6 class="">I don't need anything.</h6>
-					</div>
-				</div>
-				<div class="d-flex pb-2">
-					<div class="badge bg-secondary text-wrap text-start">
-						<h6 class="">OK</h6>
-					</div>
-					<div class="p-2 flex-grow-1"></div>
-				</div>
-				<div class="d-flex pb-2">
-					<div class="badge bg-secondary text-wrap text-start">
-						<h6 class="">So why tf u ask?</h6>
-					</div>
-					<div class="p-2 flex-grow-1"></div>
-				</div>
-			</div>
+				style="height: 420px; width: 335px;" id="boxChat"></div>
 			<div class="input-group mt-3">
-				<input class="form-control" placeholder="Chat..."></input>
-				<button class="btn btn-primary">
+				<input class="form-control" placeholder="Chat..." id="chatInput"></input>
+				<button class="btn btn-primary" id="sendChatButton"
+					onclick="sendMessage()">
 					<i class="fa fa-paper-plane fa-lg" aria-hidden="true"></i>
 				</button>
 			</div>
@@ -72,8 +48,8 @@
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
 	integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
 	crossorigin="anonymous"></script>
-<script src="${pageContext.servletContext.contextPath}/js/toast.js"></script>
-<script src="${pageContext.servletContext.contextPath}/js/course_filter.js"></script>
+<script src="${pageContext.servletContext.contextPath}/js/chat_toast.js"
+	defer></script>
 
 </body>
 </html>

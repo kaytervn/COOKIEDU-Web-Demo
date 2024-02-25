@@ -18,10 +18,10 @@
 	</session-config>
 	<error-page>
 		<error-code>404</error-code>
-		<location>/views/error-pages/error_404.jsp</location>
+		<location>/views/error_pages/error_404.jsp</location>
 	</error-page>
 	<error-page>
 		<exception-type>java.lang.Throwable</exception-type>
-		<location>/views/error-pages/error_java.jsp</location>
+		<location>/views/error_pages/error_java.jsp</location>
 	</error-page>
 </web-app>

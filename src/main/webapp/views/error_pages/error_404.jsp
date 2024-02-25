@@ -1,9 +1,15 @@
 <%@ include file="/views/includes/header.jsp"%>
-<div class="container text-center mt-5 mb-5">
-	<img src="${pageContext.servletContext.contextPath}/images/error.png"
-		alt="Error">
-	<h1>404 Error</h1>
-	<p>The server was not able to find the file you requested.</p>
-	<p>To continue, click the Back button in your browser.</p>
+<div class="container">
+	<div class="row justify-content-center">
+		<img
+			src="${pageContext.servletContext.contextPath}/images/error_404.png"
+			alt="Error" style="width: 700px;">
+	</div>
+	<div class="mx-auto p-2" style="width: 500px;">
+		<p class="lead">The server was not able to find the file you
+			requested.</p>
+		<p class="lead">To continue, click the Back button in your
+			browser.</p>
+	</div>
 </div>
 <%@ include file="/views/includes/footer.jsp"%>

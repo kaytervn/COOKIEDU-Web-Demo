@@ -22,7 +22,8 @@
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="stylesheet"
 	href="${pageContext.servletContext.contextPath}/styles/style.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
 <style>
 .card:hover {
@@ -48,7 +49,9 @@
 
 			<div class="collapse navbar-collapse" id="navmenu">
 				<ul class="navbar-nav">
-					<li class="nav-item"><a href="#" class="nav-link"> Home</a></li>
+					<li class="nav-item"><a
+						href="${pageContext.servletContext.contextPath}/views/index.jsp"
+						class="nav-link"> Home</a></li>
 					<li class="nav-item"><a
 						href="${pageContext.servletContext.contextPath}/views/course.jsp"
 						class="nav-link"> Course</a></li>
@@ -64,8 +67,8 @@
 								class="badge bg-danger">0</span>
 						</button>
 					</li>
-					<li class="nav-item"><a href="#" class="nav-link">
-							Teach on COOKIEDU</a></li>
+					<li class="nav-item"><a href="#" class="nav-link"> Teach
+							on COOKIEDU</a></li>
 					<li class="nav-item"><a href="#instructors"
 						class="nav-link text-warning"><i class="fa fa-sign-in"
 							aria-hidden="true"></i> Sign in</a></li>
