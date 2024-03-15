@@ -1,5 +1,5 @@
-let listCard = document.getElementById('listCourse').querySelectorAll('.card');
-let listPageNumber = document.querySelector('.pagination');
+let listCard = document.getElementById("listCourse").querySelectorAll(".card");
+let listPageNumber = document.querySelector(".pagination");
 
 let listCourse = [];
 let filterArray = [];
@@ -8,131 +8,151 @@ const itemsPerPage = 6;
 let currentPage = 0;
 let totalPages = Math.ceil(listCard.length / itemsPerPage);
 
-listCard.forEach(function(card) {
-	const id = card.querySelector("#courseId").innerText;
-	const image = card.querySelector("#image").innerText;
-	const courseName = card.querySelector("#courseName").innerText;
-	const teacherName = card.querySelector("#teacherName").innerText;
-	const level = card.querySelector("#level").innerText;
-	const date = card.querySelector("#date").innerText;
-	const price = card.querySelector("#price").innerText;
-	const joined = card.querySelector("#joined").innerText;
-	const reviews = card.querySelector("#reviews").innerText;
-	const wishlisted = card.querySelector("#wishlisted").innerText;
+listCard.forEach(function (card) {
+  const id = card.querySelector("#courseId").innerText;
+  const image = card.querySelector("#image").innerText;
+  const courseName = card.querySelector("#courseName").innerText;
+  const teacherName = card.querySelector("#teacherName").innerText;
+  const level = card.querySelector("#level").innerText;
+  const date = card.querySelector("#date").innerText;
+  const price = card.querySelector("#price").innerText;
+  const joined = card.querySelector("#joined").innerText;
+  const reviews = card.querySelector("#reviews").innerText;
+  const wishlisted = card.querySelector("#wishlisted").innerText;
 
-	listCourse.push({ id: id, image: image, courseName: courseName, teacherName: teacherName, level: level, date: date, price: price, joined: joined, reviews: reviews, wishlisted: wishlisted });
-})
+  listCourse.push({
+    id: id,
+    image: image,
+    courseName: courseName,
+    teacherName: teacherName,
+    level: level,
+    date: date,
+    price: price,
+    joined: joined,
+    reviews: reviews,
+    wishlisted: wishlisted,
+  });
+});
 
 updatePage();
 
 function previousPage() {
-	currentPage--;
-	updatePage();
+  currentPage--;
+  updatePage();
 }
 
 function nextPage() {
-	currentPage++;
-	updatePage();
+  currentPage++;
+  updatePage();
 }
 
 function updateCurrentPage(num) {
-	currentPage = num;
-	updatePage();
+  currentPage = num;
+  updatePage();
 }
 
 function filterList() {
-	let searchInput = document.getElementById("searchInput").value.toLowerCase();
-	let sort = document.querySelector('.form-select').value;
-	filterArray = listCourse.filter(function(item) {
-		if (item.courseName.toLowerCase().includes(searchInput) || item.teacherName.toLowerCase().includes(searchInput)) {
-			return item;
-		}
-	});
+  let searchInput = document.getElementById("searchInput").value.toLowerCase();
+  let sort = document.querySelector(".form-select").value;
+  filterArray = listCourse.filter(function (item) {
+    if (
+      item.courseName.toLowerCase().includes(searchInput) ||
+      item.teacherName.toLowerCase().includes(searchInput)
+    ) {
+      return item;
+    }
+  });
 
-	filterArray.sort(function(a, b) {
-		switch (sort) {
-			case 'mostWishlisted':
-				return b.wishlisted - a.wishlisted;
-			case 'mostReviewed':
-				return b.reviews - a.reviews;
-			case 'bestSellers':
-				return b.joined - a.joined;
-			case 'newest':
-				new Date(a.date) - new Date(b.date);
-			case 'oldest':
-				new Date(b.date) - new Date(a.date);
-			case 'highestPrice':
-				return b.price - a.price;
-			case 'lowestPrice':
-				return a.price - b.price;
-		}
-	});
+  filterArray.sort(function (a, b) {
+    switch (sort) {
+      case "mostWishlisted":
+        return b.wishlisted - a.wishlisted;
+      case "mostReviewed":
+        return b.reviews - a.reviews;
+      case "bestSellers":
+        return b.joined - a.joined;
+      case "newest":
+        new Date(a.date) - new Date(b.date);
+      case "oldest":
+        new Date(b.date) - new Date(a.date);
+      case "highestPrice":
+        return b.price - a.price;
+      case "lowestPrice":
+        return a.price - b.price;
+    }
+  });
 }
 
 function updatePagination() {
-	totalPages = Math.ceil(filterArray.length / itemsPerPage);
-	listPageNumber.innerHTML = "";
-	if (filterArray.length > 0) {
-		listPageNumber.innerHTML += `<li class="page-item"><button class="page-link" onclick="previousPage()">Previous</button></li>`;
+  totalPages = Math.ceil(filterArray.length / itemsPerPage);
+  listPageNumber.innerHTML = "";
+  if (filterArray.length > 0) {
+    listPageNumber.innerHTML += `<li class="page-item"><button class="page-link" onclick="previousPage()">Previous</button></li>`;
 
-		if (totalPages <= 5) {
-			for (let i = 0; i < totalPages; i++) {
-				listPageNumber.innerHTML += `<li class="page-item"><button class="page-link" onclick="updateCurrentPage(${i})">${i + 1}</button></li>`;
-			}
-		}
-		else {
-			listPageNumber.innerHTML += `<li class="page-item"><button class="page-link" onclick="updateCurrentPage(${0})">${1}</button></li>`;
-			if (currentPage <= 2) {
-				listPageNumber.innerHTML += `<li class="page-item"><button class="page-link" onclick="updateCurrentPage(${1})">${2}</button></li>`;
-				listPageNumber.innerHTML += `<li class="page-item"><button class="page-link" onclick="updateCurrentPage(${2})">${3}</button></li>`;
-				listPageNumber.innerHTML += `<li class="page-item"><button class="page-link">...</button></li>`;
-			}
-			else if (currentPage >= totalPages - 2) {
-				listPageNumber.innerHTML += `<li class="page-item"><button class="page-link">...</button></li>`;
-				listPageNumber.innerHTML += `<li class="page-item"><button class="page-link" onclick="updateCurrentPage(${totalPages - 3})">${totalPages - 2}</button></li>`;
-				listPageNumber.innerHTML += `<li class="page-item"><button class="page-link" onclick="updateCurrentPage(${totalPages - 2})">${totalPages - 1}</button></li>`;
-			}
-			else {
-				listPageNumber.innerHTML += `<li class="page-item"><button class="page-link">...</button></li>`;
-				listPageNumber.innerHTML += `<li class="page-item"><button class="page-link" onclick="updateCurrentPage(${currentPage})">${currentPage + 1}</button></li>`;
-				listPageNumber.innerHTML += `<li class="page-item"><button class="page-link">...</button></li>`;
-			}
-			listPageNumber.innerHTML += `<li class="page-item"><button class="page-link" onclick="updateCurrentPage(${totalPages - 1})">${totalPages}</button></li>`;
-		}
-		listPageNumber.innerHTML += `<li class="page-item"><button class="page-link" onclick="nextPage()">Next</button></li>`;
+    if (totalPages <= 5) {
+      for (let i = 0; i < totalPages; i++) {
+        listPageNumber.innerHTML += `<li class="page-item"><button class="page-link" onclick="updateCurrentPage(${i})">${
+          i + 1
+        }</button></li>`;
+      }
+    } else {
+      listPageNumber.innerHTML += `<li class="page-item"><button class="page-link" onclick="updateCurrentPage(${0})">${1}</button></li>`;
+      if (currentPage <= 2) {
+        listPageNumber.innerHTML += `<li class="page-item"><button class="page-link" onclick="updateCurrentPage(${1})">${2}</button></li>`;
+        listPageNumber.innerHTML += `<li class="page-item"><button class="page-link" onclick="updateCurrentPage(${2})">${3}</button></li>`;
+        listPageNumber.innerHTML += `<li class="page-item"><button class="page-link">...</button></li>`;
+      } else if (currentPage >= totalPages - 2) {
+        listPageNumber.innerHTML += `<li class="page-item"><button class="page-link">...</button></li>`;
+        listPageNumber.innerHTML += `<li class="page-item"><button class="page-link" onclick="updateCurrentPage(${
+          totalPages - 3
+        })">${totalPages - 2}</button></li>`;
+        listPageNumber.innerHTML += `<li class="page-item"><button class="page-link" onclick="updateCurrentPage(${
+          totalPages - 2
+        })">${totalPages - 1}</button></li>`;
+      } else {
+        listPageNumber.innerHTML += `<li class="page-item"><button class="page-link">...</button></li>`;
+        listPageNumber.innerHTML += `<li class="page-item"><button class="page-link" onclick="updateCurrentPage(${currentPage})">${
+          currentPage + 1
+        }</button></li>`;
+        listPageNumber.innerHTML += `<li class="page-item"><button class="page-link">...</button></li>`;
+      }
+      listPageNumber.innerHTML += `<li class="page-item"><button class="page-link" onclick="updateCurrentPage(${
+        totalPages - 1
+      })">${totalPages}</button></li>`;
+    }
+    listPageNumber.innerHTML += `<li class="page-item"><button class="page-link" onclick="nextPage()">Next</button></li>`;
 
-		const listItems = listPageNumber.querySelectorAll('.page-item');
-		listItems.forEach(function(item) {
-			const itemText = item.querySelector('.page-link').innerText;
-			if (
-				(currentPage == 0 && itemText == 'Previous') ||
-				(currentPage + 1 == totalPages && itemText == 'Next')
-			) {
-				item.classList.add("disabled");
-			}
-			if (currentPage + 1 == itemText) {
-				item.classList.add("active");
-			}
-		})
-	}
+    const listItems = listPageNumber.querySelectorAll(".page-item");
+    listItems.forEach(function (item) {
+      const itemText = item.querySelector(".page-link").innerText;
+      if (
+        (currentPage == 0 && itemText == "Previous") ||
+        (currentPage + 1 == totalPages && itemText == "Next")
+      ) {
+        item.classList.add("disabled");
+      }
+      if (currentPage + 1 == itemText) {
+        item.classList.add("active");
+      }
+    });
+  }
 }
 
 function executeFilter() {
-	currentPage = 0
-	updatePage();
+  currentPage = 0;
+  updatePage();
 }
 
 function updatePage() {
-	filterList();
-	updatePagination();
-	console.log(filterArray);
-	document.getElementById("listCourse").innerHTML = ``;
-	if (filterArray.length > 0) {
-		for (var i = 0; i < filterArray.length; i++) {
-			const isInRange = i >= currentPage * itemsPerPage && i < (currentPage + 1) * itemsPerPage;
-			if (isInRange) {
-				document.getElementById("listCourse").innerHTML +=
-					`<div class="col">
+  filterList();
+  updatePagination();
+  document.getElementById("listCourse").innerHTML = ``;
+  if (filterArray.length > 0) {
+    for (var i = 0; i < filterArray.length; i++) {
+      const isInRange =
+        i >= currentPage * itemsPerPage && i < (currentPage + 1) * itemsPerPage;
+      if (isInRange) {
+        document.getElementById("listCourse").innerHTML += `<div class="col">
 						<div class="card h-100" id="course1">
 							<img
 								src="${filterArray[i].image}"
@@ -172,10 +192,10 @@ function updatePage() {
 								</div>
 						</div>
 					</div>`;
-			}
-		}
-	}
-	else {
-		document.getElementById("listCourse").innerHTML = "<p class=\"fs-2 text-center text-danger\">Not Found.</p>";
-	}
+      }
+    }
+  } else {
+    document.getElementById("listCourse").innerHTML =
+      '<p class="fs-2 text-center text-danger">Not Found.</p>';
+  }
 }
