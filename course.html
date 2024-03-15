@@ -1,5 +1,78 @@
-<%@ include file="/views/includes/header.jsp"%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>COOKIEDU</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+<link rel="icon"
+	href="/images/cookiedu_logo.png">
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+	crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet"
+	href="/styles/style.css" />
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<style>
+.card:hover {
+	transform: scale(1.05);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
+}
+</style>
+
+</head>
+<body>
+
+	<nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
+		<div class="container">
+			<a href="#" class="navbar-brand"> <img width="40"
+				src="/images/cookiedu_logo.png">
+				<span class="text-warning">COOKI</span>EDU
+			</a>
+
+			<button class="navbar-toggler" data-bs-toggle="collapse"
+				data-bs-target="#navmenu">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navmenu">
+				<ul class="navbar-nav">
+					<li class="nav-item"><a
+						href="index.html"
+						class="nav-link"> Home</a></li>
+					<li class="nav-item"><a
+						href="course.html"
+						class="nav-link"> Course</a></li>
+					<li class="nav-item"><a href="error_404.html" class="nav-link">
+							Instructor</a></li>
+					<li class="nav-item"><a href="error_404.html" class="nav-link">
+							Community</a></li>
+				</ul>
+				<ul class="navbar-nav ms-auto">
+					<li class="nav-item">
+						<button class="btn btn-outline-light">
+							<i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart <span
+								class="badge bg-danger">0</span>
+						</button>
+					</li>
+					<li class="nav-item"><a href="error_404.html" class="nav-link"> Teach
+							on COOKIEDU</a></li>
+					<li class="nav-item"><a href="error_404.html"
+						class="nav-link text-warning"><i class="fa fa-sign-in"
+							aria-hidden="true"></i> Sign in</a></li>
+					<li class="nav-item">
+						<button class="btn btn-primary">Register</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 <section
 	class="bg-dark text-light p-lg-0 pt-lg-5 text-center text-sm-start">
 	<div class="container">
@@ -27,7 +100,7 @@
 					industry, shaping a brighter future together.</p>
 			</div>
 			<img class="img-fluid w-50 d-none d-sm-block d-md-block"
-				src="${pageContext.servletContext.contextPath}/images/course.png"
+				src="/images/course.png"
 				alt="" />
 		</div>
 	</div>
@@ -174,7 +247,7 @@
 				<div class="row row-cols-1 row-cols-md-3 g-4 pb-4" id="listCourse">
 					<div class="card" style="display: none;">
 						<div id="courseId">1</div>
-						<div id="image">${pageContext.servletContext.contextPath}/images/blank.png</div>
+						<div id="image">/images/blank.png</div>
 						<div id="courseName">JavaScript Basics</div>
 						<div id="teacherName">John Smith</div>
 						<div id="date">2023-02-15</div>
@@ -186,7 +259,7 @@
 					</div>
 					<div class="card" style="display: none;">
 						<div id="courseId">2</div>
-						<div id="image">${pageContext.servletContext.contextPath}/images/blank.png</div>
+						<div id="image">/images/blank.png</div>
 						<div id="courseName">Python for Data Science</div>
 						<div id="teacherName">Jane Doe</div>
 						<div id="date">2023-03-01</div>
@@ -198,7 +271,7 @@
 					</div>
 					<div class="card" style="display: none;">
 						<div id="courseId">3</div>
-						<div id="image">${pageContext.servletContext.contextPath}/images/blank.png</div>
+						<div id="image">/images/blank.png</div>
 						<div id="courseName">Java Programming</div>
 						<div id="teacherName">Bob Wilson</div>
 						<div id="date">2023-04-15</div>
@@ -210,7 +283,7 @@
 					</div>
 					<div class="card" style="display: none;">
 						<div id="courseId">4</div>
-						<div id="image">${pageContext.servletContext.contextPath}/images/blank.png</div>
+						<div id="image">/images/blank.png</div>
 						<div id="courseName">Machine Learning</div>
 						<div id="teacherName">Sarah Lee</div>
 						<div id="date">2023-05-01</div>
@@ -222,7 +295,7 @@
 					</div>
 					<div class="card" style="display: none;">
 						<div id="courseId">5</div>
-						<div id="image">${pageContext.servletContext.contextPath}/images/blank.png</div>
+						<div id="image">/images/blank.png</div>
 						<div id="courseName">Web Development</div>
 						<div id="teacherName">Michael Chen</div>
 						<div id="date">2023-06-01</div>
@@ -234,7 +307,7 @@
 					</div>
 					<div class="card" style="display: none;">
 						<div id="courseId">6</div>
-						<div id="image">${pageContext.servletContext.contextPath}/images/blank.png</div>
+						<div id="image">/images/blank.png</div>
 						<div id="courseName">Photoshop</div>
 						<div id="teacherName">Mary Thomas</div>
 						<div id="date">2023-07-15</div>
@@ -246,7 +319,7 @@
 					</div>
 					<div class="card" style="display: none;">
 						<div id="courseId">7</div>
-						<div id="image">${pageContext.servletContext.contextPath}/images/blank.png</div>
+						<div id="image">/images/blank.png</div>
 						<div id="courseName">Digital Marketing</div>
 						<div id="teacherName">James Williams</div>
 						<div id="date">2023-08-01</div>
@@ -258,7 +331,7 @@
 					</div>
 					<div class="card" style="display: none;">
 						<div id="courseId">8</div>
-						<div id="image">${pageContext.servletContext.contextPath}/images/blank.png</div>
+						<div id="image">/images/blank.png</div>
 						<div id="courseName">AWS Certification</div>
 						<div id="teacherName">Emma Taylor</div>
 						<div id="date">2023-09-01</div>
@@ -270,7 +343,7 @@
 					</div>
 					<div class="card" style="display: none;">
 						<div id="courseId">9</div>
-						<div id="image">${pageContext.servletContext.contextPath}/images/blank.png</div>
+						<div id="image">/images/blank.png</div>
 						<div id="courseName">Cyber Security</div>
 						<div id="teacherName">David Lee</div>
 						<div id="date">2023-10-15</div>
@@ -282,7 +355,7 @@
 					</div>
 					<div class="card" style="display: none;">
 						<div id="courseId">10</div>
-						<div id="image">${pageContext.servletContext.contextPath}/images/blank.png</div>
+						<div id="image">/images/blank.png</div>
 						<div id="courseName">Animation</div>
 						<div id="teacherName">Jenny Wilson</div>
 						<div id="date">2023-11-01</div>
@@ -294,7 +367,7 @@
 					</div>
 					<div class="card" style="display: none;">
 						<div id="courseId">11</div>
-						<div id="image">${pageContext.servletContext.contextPath}/images/blank.png</div>
+						<div id="image">/images/blank.png</div>
 						<div id="courseName">Game Development</div>
 						<div id="teacherName">Tom Hill</div>
 						<div id="date">2023-12-01</div>
@@ -306,7 +379,7 @@
 					</div>
 					<div class="card" style="display: none;">
 						<div id="courseId">12</div>
-						<div id="image">${pageContext.servletContext.contextPath}/images/blank.png</div>
+						<div id="image">/images/blank.png</div>
 						<div id="courseName">AutoCAD</div>
 						<div id="teacherName">Sandra Martinez</div>
 						<div id="date">2024-01-15</div>
@@ -318,7 +391,7 @@
 					</div>
 					<div class="card" style="display: none;">
 						<div id="courseId">13</div>
-						<div id="image">${pageContext.servletContext.contextPath}/images/blank.png</div>
+						<div id="image">/images/blank.png</div>
 						<div id="courseName">Content Writing</div>
 						<div id="teacherName">Nancy Allen</div>
 						<div id="date">2024-02-01</div>
@@ -330,7 +403,7 @@
 					</div>
 					<div class="card" style="display: none;">
 						<div id="courseId">14</div>
-						<div id="image">${pageContext.servletContext.contextPath}/images/blank.png</div>
+						<div id="image">/images/blank.png</div>
 						<div id="courseName">Excel Advanced</div>
 						<div id="teacherName">Anthony Martin</div>
 						<div id="date">2024-03-01</div>
@@ -342,7 +415,7 @@
 					</div>
 					<div class="card" style="display: none;">
 						<div id="courseId">15</div>
-						<div id="image">${pageContext.servletContext.contextPath}/images/blank.png</div>
+						<div id="image">/images/blank.png</div>
 						<div id="courseName">Video Editing</div>
 						<div id="teacherName">Erica Rodriguez</div>
 						<div id="date">2024-04-01</div>
@@ -354,7 +427,7 @@
 					</div>
 					<div class="card" style="display: none;">
 						<div id="courseId">16</div>
-						<div id="image">${pageContext.servletContext.contextPath}/images/blank.png</div>
+						<div id="image">/images/blank.png</div>
 						<div id="courseName">Project Management</div>
 						<div id="teacherName">Mark Taylor</div>
 						<div id="date">2024-05-15</div>
@@ -366,7 +439,7 @@
 					</div>
 					<div class="card" style="display: none;">
 						<div id="courseId">17</div>
-						<div id="image">${pageContext.servletContext.contextPath}/images/blank.png</div>
+						<div id="image">/images/blank.png</div>
 						<div id="courseName">UX/UI Design</div>
 						<div id="teacherName">Olivia Brown</div>
 						<div id="date">2024-06-01</div>
@@ -378,7 +451,7 @@
 					</div>
 					<div class="card" style="display: none;">
 						<div id="courseId">18</div>
-						<div id="image">${pageContext.servletContext.contextPath}/images/blank.png</div>
+						<div id="image">/images/blank.png</div>
 						<div id="courseName">Graphic Design</div>
 						<div id="teacherName">Emily Davis</div>
 						<div id="date">2024-07-15</div>
@@ -390,7 +463,7 @@
 					</div>
 					<div class="card" style="display: none;">
 						<div id="courseId">19</div>
-						<div id="image">${pageContext.servletContext.contextPath}/images/blank.png</div>
+						<div id="image">/images/blank.png</div>
 						<div id="courseName">Logo Design</div>
 						<div id="teacherName">Jacob Moore</div>
 						<div id="date">2024-08-01</div>
@@ -402,7 +475,7 @@
 					</div>
 					<div class="card" style="display: none;">
 						<div id="courseId">20</div>
-						<div id="image">${pageContext.servletContext.contextPath}/images/blank.png</div>
+						<div id="image">/images/blank.png</div>
 						<div id="courseName">Web Design</div>
 						<div id="teacherName">Sophia Thomas</div>
 						<div id="date">2024-09-15</div>
@@ -423,6 +496,60 @@
 </section>
 
 <script
-	src="${pageContext.servletContext.contextPath}/js/course_filter.js"></script>
+	src="/js/course_filter.js"></script>
 
-<%@ include file="/views/includes/footer.jsp"%>
+<footer class="p-5 bg-dark text-white text-center position-relative">
+	<div class="container">
+		<p class="lead">
+			Copyright &copy;
+			<script>
+				document.write(new Date().getFullYear());
+			</script>
+			COOKIEDU - All Rights Reserved.
+		</p>
+	</div>
+</footer>
+
+<div class="position-fixed bottom-0 end-0 p-3"
+	style="bottom: 10px; right: 10px;">
+	<button class="btn rounded-pill btn-lg btn-info" id="liveToastBtn">
+		<i class="fa fa-comments" aria-hidden="true"></i>
+	</button>
+</div>
+
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+	<div id="liveToast" class="toast" role="alert" aria-live="assertive"
+		aria-atomic="true" data-bs-autohide="false">
+		<div class="toast-header text-bg-info" style="height: 60px;">
+			<img
+				src="/images/cookiedu_logo.png"
+				style="width: 30px;" class="rounded me-2" alt="..."> <strong
+				class="me-auto">COOKIEDU <small class="text-success"><i
+					class="fa fa-circle fa-2xs"></i></small>
+			</strong> <small>Just now</small>
+			<button type="button" class="btn-close" data-bs-dismiss="toast"
+				aria-label="Close"></button>
+		</div>
+		<div class="toast-body bg-light" style="height: 500px;">
+			<div class="overflow-y-scroll overflow-x-hidden"
+				style="height: 420px; width: 335px;" id="boxChat"></div>
+			<div class="input-group mt-3">
+				<input class="form-control" placeholder="Chat..." id="chatInput"></input>
+				<button class="btn btn-primary" id="sendChatButton"
+					onclick="sendMessage()">
+					<i class="fa fa-paper-plane fa-lg" aria-hidden="true"></i>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+	crossorigin="anonymous"></script>
+<script src="/js/chat_toast.js"
+	defer></script>
+
+</body>
+</html>
